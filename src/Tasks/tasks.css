@@ -1,0 +1,63 @@
+.tasks {
+    list-style: none;
+    border: 0px solid rgb(231, 231, 231);
+    border-style: solid none none none;
+    padding: 25px;
+    width: 100%;
+}
+
+.tasks__li {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    border: 2px solid rgb(231, 231, 231);
+    border-style: none none solid none;
+    padding: 5px;
+
+}
+
+.tasks__li--hidden {
+    display:none;
+}
+
+.tasks__span {
+    text-decoration: line-through;
+}
+
+.tasks__button--delete {
+    width:30px;
+    height:30px;
+    margin-left: 20px;
+    border: none;
+    background-color: rgb(190, 4, 4);
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.8s;
+    cursor: pointer;
+}
+
+.tasks__button--delete:hover {
+    background-color: rgba(255, 0, 0, 0.692);
+}
+
+.tasks__button--toggleDone {
+    width:30px;
+    height:30px;
+    margin-right: 20px;
+    border: none;
+    background-color: rgb(4, 185, 34);
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.8s;
+    cursor: pointer;
+}
+
+.tasks__button--toggleDone:hover {
+    background-color: rgb(1, 248, 42)
+}

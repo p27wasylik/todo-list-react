@@ -1,0 +1,24 @@
+.div__button{
+    text-decoration:none;
+    color:teal;
+    margin-left:25px;
+    border: none;
+    background-color:white;
+    cursor:pointer;
+}
+
+.div__button:disabled{
+    color:#ccc;
+    cursor:default;
+}
+
+@media (max-width: 767px) {
+    .div__button{
+        flex-basis:100%;
+        margin:5px;
+    }
+    .div__buttons{
+        display:flex;
+        flex-wrap:wrap;
+    }
+}

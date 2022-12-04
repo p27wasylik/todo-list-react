@@ -1,0 +1,29 @@
+.section {
+    background-color: white;
+    border: 5px solid rgb(231, 231, 231);
+    border-top-width: 2px;
+    padding: 5px;
+}
+
+.section__div{
+    padding: 0px 20px;
+    background-color: white;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border: 0px solid rgb(231, 231, 231);
+    border-bottom-width: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+@media (max-width: 767px) {
+    .section__div{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
+
+.section__header {
+    font-weight: 700;
+}

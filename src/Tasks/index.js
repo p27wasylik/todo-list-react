@@ -1,16 +1,23 @@
 import "./tasks.css";
 
-const Tasks = (props) => (
+const Tasks = ({tasks, hideDone, removeTask}) => (
     <ul className="tasks">
-        {props.tasks.map(task => (
-            <li className={`tasks__li ${task.done && props.hideDone ? "tasks__li--hidden" : ""}`}>
+        {tasks.map(task => (
+            <li className={`tasks__li ${task.done && hideDone ? "tasks__li--hidden" : ""}`}>
                 <button className="tasks__button--toggleDone">
                 {task.done ? "✔" : ""}
                 </button>
-                <span className={`{task.done ? "taks__span" : ""}`}>
+                <span className={
+                    `${task.done ? "tasks__span" : ""}`
+                    }>
                 {task.content}
                 </span>
-                <button className="tasks__button--delete">🗑</button>
+                <button 
+                className="tasks__button--delete"
+                onClick={() => removeTask(task.id)}
+                >
+                    🗑
+                </button>
             </li>
         ))}
     </ul>
